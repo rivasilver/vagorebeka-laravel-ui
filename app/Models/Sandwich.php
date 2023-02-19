@@ -11,19 +11,19 @@ class Sandwich extends Model
 
     protected $visible = [
         'id',
-        'nev',
-        'kenyertipus',
-        'feltetek_szama',
-        'feltetek',
-        'vegetarianus',
+        'name',
+        'bread_type',
+        'number_of_toppings',
+        'toppings',
+        'vegetarian',
         'created_at'
     ];
 
     protected $fillable = [
-        'nev',
-        'kenyertipus',
-        'feltetek_szama',
-        'feltetek',
-        'vegetarianus'
+        'name',
+        'bread_type',
+        'number_of_toppings',
+        'toppings',
+        'vegetarian',
     ];
 }

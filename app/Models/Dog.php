@@ -11,17 +11,17 @@ class Dog extends Model
 
     protected $visible = [
         'id',
-        'nev',
-        'fajta',
-        'fajtatiszta',
-        'kor',
+        'name',
+        'breed',
+        'purebred',
+        'age',
         'created_at'
     ];
 
     protected $fillable = [
-        'nev',
-        'fajta',
-        'fajtatiszta',
-        'kor'
+        'name',
+        'breed',
+        'purebred',
+        'age'
     ];
 }
