@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Sandwich;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,14 @@ class SandwichFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
+        $numberOfToppings = fake()->randomDigitNotZero();
         return [
-            //
+            'name' => fake()->lastName(),
+            'number_of_toppings' => $numberOfToppings,
+            'toppings' => fake()->words($numberOfToppings, true),
+            'vegetarian' => fake()->boolean()
         ];
     }
 }

@@ -12,7 +12,7 @@ class Dog extends Model
     protected $visible = [
         'id',
         'name',
-        'breed',
+        'color',
         'purebred',
         'age',
         'created_at'
@@ -20,7 +20,7 @@ class Dog extends Model
 
     protected $fillable = [
         'name',
-        'breed',
+        'color',
         'purebred',
         'age'
     ];

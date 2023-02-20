@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Dog;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,13 @@ class DogFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition()
     {
         return [
-            'nev'
+            'name' => fake()->firstName(),
+            'color' => fake()->safeColorName(),
+            'purebred' => fake()->boolean(),
+            'age' => fake()->numberBetween(1,15)
         ];
     }
 }

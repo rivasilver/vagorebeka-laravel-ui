@@ -12,7 +12,6 @@ class Sandwich extends Model
     protected $visible = [
         'id',
         'name',
-        'bread_type',
         'number_of_toppings',
         'toppings',
         'vegetarian',
@@ -21,7 +20,6 @@ class Sandwich extends Model
 
     protected $fillable = [
         'name',
-        'bread_type',
         'number_of_toppings',
         'toppings',
         'vegetarian',

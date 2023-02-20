@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('dogs', function (Blueprint $table) {
             $table->id();
             $table->string('name', 150);
-            $table->string('breed', 150);
+            $table->string('color', 150);
             $table->boolean('purebred');
             $table->integer('age');
             $table->timestamps();

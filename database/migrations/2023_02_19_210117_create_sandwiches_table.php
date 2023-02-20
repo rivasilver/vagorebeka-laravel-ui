@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('sandwiches', function (Blueprint $table) {
             $table->id();
             $table->string('name', 150);
-            $table->string('bread_type', 150);
             $table->integer('number_of_toppings');
             $table->string('toppings');
             $table->boolean('vegetarian');
