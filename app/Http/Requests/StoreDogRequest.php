@@ -22,7 +22,10 @@ class StoreDogRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "name" => "required|string|max:150",
+            "color" => "required|string|max:150",
+            "purebred" => "required|boolean",
+            "age" => "required|integer|max:15"
         ];
     }
 }

@@ -9,9 +9,9 @@ class UpdateDogRequest extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
+    public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -19,10 +19,13 @@ class UpdateDogRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
-    public function rules(): array
+    public function rules()
     {
         return [
-            //
+            "name" => "string|max:150",
+            "color" => "string|max:150",
+            "purebred" => "boolean",
+            "age" => "integer|max:15"
         ];
     }
 }

@@ -21,8 +21,12 @@ class StoreSandwichRequest extends FormRequest
      */
     public function rules(): array
     {
+        $number_of_toppings = "number_of_toppings";
         return [
-            //
+            "name" => "required|string|max:150",
+            "number_of_toppings" => "required|integer|min:1|max:9",
+            "toppings" => "required|text|size:$number_of_toppings",
+            "vegetarian" => "required|boolean"
         ];
     }
 }

@@ -9,9 +9,9 @@ class UpdateSandwichRequest extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
+    public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -19,10 +19,14 @@ class UpdateSandwichRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
-    public function rules(): array
+    public function rules()
     {
+        $number_of_toppings = "number_of_toppings";
         return [
-            //
+            "name" => "string|max:150",
+            "number_of_toppings" => "integer|min:1|max:9",
+            "toppings" => "text|size:$number_of_toppings",
+            "vegetarian" => "boolean"
         ];
     }
 }
