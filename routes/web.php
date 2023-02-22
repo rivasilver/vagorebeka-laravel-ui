@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::apiResource("/dog", DogController::class);
+Route::apiResource("/sandwich", SandwichController::class);

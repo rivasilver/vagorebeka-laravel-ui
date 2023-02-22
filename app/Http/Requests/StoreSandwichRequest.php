@@ -9,7 +9,7 @@ class StoreSandwichRequest extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
+    public function authorize()
     {
         return true;
     }
@@ -19,13 +19,12 @@ class StoreSandwichRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
-    public function rules(): array
+    public function rules()
     {
-        $number_of_toppings = "number_of_toppings";
         return [
             "name" => "required|string|max:150",
             "number_of_toppings" => "required|integer|min:1|max:9",
-            "toppings" => "required|text|size:$number_of_toppings",
+            "toppings" => "required|string",
             "vegetarian" => "required|boolean"
         ];
     }

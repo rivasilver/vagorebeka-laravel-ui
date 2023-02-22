@@ -11,7 +11,7 @@ class DogSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         Dog::factory(5)->create();
     }

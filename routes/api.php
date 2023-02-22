@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\DogController;
+use App\Http\Controllers\API\SandwichController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource("/dog", DogController::class);
+Route::apiResource("/sandwich", SandwichController::class);
