@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DogController;
+use App\Http\Controllers\SandwichController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource("/dog", DogController::class);
-Route::apiResource("/sandwich", SandwichController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('/dogs', DogController::class);
+Route::resource('/sandwiches', SandwichController::class);

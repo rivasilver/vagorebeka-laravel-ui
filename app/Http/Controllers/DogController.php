@@ -13,15 +13,16 @@ class DogController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index()
     {
-        //
+        $dogs = Dog::all();
+        return view("dogs.index", ['dogs'=>$dogs]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): Response
+    public function create()
     {
         //
     }
@@ -29,7 +30,7 @@ class DogController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDogRequest $request): RedirectResponse
+    public function store(StoreDogRequest $request)
     {
         //
     }
@@ -37,7 +38,7 @@ class DogController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Dog $dog): Response
+    public function show(Dog $dog)
     {
         //
     }
@@ -45,7 +46,7 @@ class DogController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Dog $dog): Response
+    public function edit(Dog $dog)
     {
         //
     }
@@ -53,7 +54,7 @@ class DogController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDogRequest $request, Dog $dog): RedirectResponse
+    public function update(UpdateDogRequest $request, Dog $dog)
     {
         //
     }
@@ -61,7 +62,7 @@ class DogController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Dog $dog): RedirectResponse
+    public function destroy(Dog $dog)
     {
         //
     }
