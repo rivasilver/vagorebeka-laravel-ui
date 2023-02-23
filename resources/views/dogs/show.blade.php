@@ -25,6 +25,7 @@
         </div>
         <div class="card-footer">
             <a href="{{ route('dogs.edit', $dog->id) }}" class="btn btn-outline-secondary">Edit</a>
+            @include('dogs.delete-button', ['dog' => $dog])
         </div>
     </div>
 </div>

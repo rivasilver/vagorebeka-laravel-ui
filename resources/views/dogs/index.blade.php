@@ -29,6 +29,7 @@
 								<td>
 									<a href="{{ route("dogs.show", $dog->id) }}" class="btn btn-secondary">Details</a>
 									<a href="{{ route("dogs.edit", $dog->id) }}" class="btn btn-secondary">Edit</a>
+                                    @include('dogs.delete-button', ['dog' => $dog])
 								</td>
 							</tr>
 						@endforeach
