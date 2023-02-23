@@ -24,7 +24,7 @@ class DogController extends Controller
      */
     public function create()
     {
-        //
+        return view("dogs.create");
     }
 
     /**
@@ -32,7 +32,10 @@ class DogController extends Controller
      */
     public function store(StoreDogRequest $request)
     {
-        //
+        $dog = new Dog();
+        $dog->fill($request->all());
+        $dog->save();
+        return redirect()->route("dogs.show", $dog->id);
     }
 
     /**
