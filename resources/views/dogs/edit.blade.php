@@ -53,7 +53,7 @@
                             ])>
                     </div>
 
-                    <button type="submit" class="btn btn-secondary">Felvétel</button>
+                    <button type="submit" class="btn btn-secondary">Update</button>
                 </form>
             </div>
         </div>
