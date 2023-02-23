@@ -51,7 +51,7 @@ class DogController extends Controller
      */
     public function edit(Dog $dog)
     {
-        //
+        return view("dogs.edit", ["dog" => $dog]);
     }
 
     /**
@@ -59,7 +59,9 @@ class DogController extends Controller
      */
     public function update(UpdateDogRequest $request, Dog $dog)
     {
-        //
+        $dog->fill($request->all());
+        $dog->save();
+        return redirect()->route("dogs.show", $dog->id);
     }
 
     /**
