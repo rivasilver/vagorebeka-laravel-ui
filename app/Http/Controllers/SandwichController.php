@@ -40,7 +40,7 @@ class SandwichController extends Controller
      */
     public function show(Sandwich $sandwich)
     {
-        //
+        return view("sandwiches.show", ["sandwich"=>$sandwich]);
     }
 
     /**
