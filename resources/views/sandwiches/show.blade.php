@@ -9,22 +9,22 @@
             <table class="table table-hover table-striped">
                 <tbody>
                     <tr>
-                        <th>Color</th>
+                        <th>Number of toppings</th>
                         <td>{{ $sandwich->number_of_toppings }}</td>
                     </tr>
                     <tr>
-                        <th>Purebred</th>
+                        <th>Toppings</th>
                         <td>{{ $sandwich->toppings }}</td>
                     </tr>
                     <tr>
-                        <th>Age</th>
+                        <th>Vegetarian</th>
                         <td>{{ $sandwich->vegetarian ? "yes" : "no" }}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="card-footer">
-            <a href="{{ route('dogs.edit', $sandwich->id) }}" class="btn btn-outline-secondary">Edit</a>
+            <a href="{{ route('sandwiches.edit', $sandwich->id) }}" class="btn btn-outline-secondary">Edit</a>
         </div>
     </div>
 </div>
