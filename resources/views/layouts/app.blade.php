@@ -34,6 +34,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{route("dogs.index")}}">{{"List dogs"}}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route("dogs.create")}}">{{"New dog"}}</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route("sandwiches.index")}}">{{"List sandwiches"}}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{route("sandwiches.create")}}">{{"New sandwich"}}</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

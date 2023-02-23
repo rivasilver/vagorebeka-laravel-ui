@@ -24,7 +24,7 @@ class SandwichController extends Controller
      */
     public function create()
     {
-        //
+        return view("sandwiches.create");
     }
 
     /**
@@ -32,7 +32,10 @@ class SandwichController extends Controller
      */
     public function store(StoreSandwichRequest $request)
     {
-        //
+        $sandwich = new Sandwich();
+        $sandwich->fill($request->all());
+        $sandwich->save();
+        return redirect()->route("sandwiches.show", $sandwich->id);
     }
 
     /**
