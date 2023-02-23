@@ -13,15 +13,16 @@ class SandwichController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index()
     {
-        //
+        $sandwiches = Sandwich::all();
+        return view("sandwiches.index", ['sandwiches'=>$sandwiches]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): Response
+    public function create()
     {
         //
     }
@@ -29,7 +30,7 @@ class SandwichController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSandwichRequest $request): RedirectResponse
+    public function store(StoreSandwichRequest $request)
     {
         //
     }
@@ -37,7 +38,7 @@ class SandwichController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Sandwich $sandwich): Response
+    public function show(Sandwich $sandwich)
     {
         //
     }
@@ -45,7 +46,7 @@ class SandwichController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Sandwich $sandwich): Response
+    public function edit(Sandwich $sandwich)
     {
         //
     }
@@ -53,7 +54,7 @@ class SandwichController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSandwichRequest $request, Sandwich $sandwich): RedirectResponse
+    public function update(UpdateSandwichRequest $request, Sandwich $sandwich)
     {
         //
     }
@@ -61,7 +62,7 @@ class SandwichController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Sandwich $sandwich): RedirectResponse
+    public function destroy(Sandwich $sandwich)
     {
         //
     }
