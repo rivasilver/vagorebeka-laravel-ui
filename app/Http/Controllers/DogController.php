@@ -40,7 +40,7 @@ class DogController extends Controller
      */
     public function show(Dog $dog)
     {
-        //
+        return view("dogs.show", ["dog"=>$dog]);
     }
 
     /**
