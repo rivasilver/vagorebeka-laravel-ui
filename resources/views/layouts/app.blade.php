@@ -37,7 +37,7 @@
                         <li class="nav-item"><a class="nav-link" href="{{route("sandwiches.create")}}">{{"New sandwich"}}</a></li>
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
+                    {{-- <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
@@ -71,7 +71,7 @@
                                 </div>
                             </li>
                         @endguest
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </nav>
