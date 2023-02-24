@@ -29,7 +29,8 @@
 								<td>
 									<a href="{{ route("sandwiches.show", $sandwich->id) }}" class="btn btn-secondary">Details</a>
 									<a href="{{ route("sandwiches.edit", $sandwich->id) }}" class="btn btn-secondary">Edit</a>
-								</td>
+                                    @include('sandwiches.delete-button', ['sandwich' => $sandwich])
+                                </td>
 							</tr>
 						@endforeach
 					</tbody>

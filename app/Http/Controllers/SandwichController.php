@@ -70,6 +70,7 @@ class SandwichController extends Controller
      */
     public function destroy(Sandwich $sandwich)
     {
-        //
+        $sandwich->delete();
+        return redirect()->route("sandwiches.index");
     }
 }
