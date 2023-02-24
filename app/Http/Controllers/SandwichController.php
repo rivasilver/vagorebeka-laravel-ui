@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Validator;
 use App\Models\Sandwich;
 use App\Http\Requests\StoreSandwichRequest;
 use App\Http\Requests\UpdateSandwichRequest;
@@ -51,7 +52,7 @@ class SandwichController extends Controller
      */
     public function edit(Sandwich $sandwich)
     {
-        //
+        return view("sandwiches.edit", ["sandwich" => $sandwich]);
     }
 
     /**
@@ -59,7 +60,9 @@ class SandwichController extends Controller
      */
     public function update(UpdateSandwichRequest $request, Sandwich $sandwich)
     {
-        //
+        $sandwich->fill($request->all());
+        $sandwich->save();
+        return redirect()->route("sandwiches.show", $sandwich->id);
     }
 
     /**

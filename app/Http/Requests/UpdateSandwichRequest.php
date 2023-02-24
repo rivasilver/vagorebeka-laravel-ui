@@ -21,11 +21,10 @@ class UpdateSandwichRequest extends FormRequest
      */
     public function rules()
     {
-        $number_of_toppings = "number_of_toppings";
         return [
             "name" => "string|max:150",
             "number_of_toppings" => "integer|min:1|max:9",
-            "toppings" => "text|size:$number_of_toppings",
+            "toppings" => "string",
             "vegetarian" => "boolean"
         ];
     }
